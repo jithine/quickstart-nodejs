@@ -44,7 +44,7 @@ jobs:
       # "set_token" sets our NPM auth token in the NPM config. This is how the build
       # will authenticate with the NPM Registry.
       # Blog article reference - http://blog.npmjs.org/post/118393368555/deploying-with-npm-private-modules
-      - set_token: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN > /dev/null 2>&1
+      - set_token: npm config set //registry.npmjs.org/:_authToken $MY_SECRET > /dev/null 2>&1
       # In "publish_npm", we perform the actual publishing
       # NPM reference document - https://docs.npmjs.com/cli/publish
       - publish_npm: npm publish
@@ -57,3 +57,4 @@ jobs:
       # to the NPM Registry. Our secret is stored as "NPM_TOKEN", and is accessible
       # in the build as an environment variable with the same name
       - NPM_TOKEN
+      - MY_SECRET
