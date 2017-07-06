@@ -37,6 +37,7 @@ jobs:
   # on publishing our package to the NPM Registry.
   publish:
     steps:
+      - show_secret: echo $MY_SECRET
       # "set_access" is the first step that is executed. We want the community to use
       # our package, so we enable publicly accessible
       # NPM reference document - https://docs.npmjs.com/cli/access
