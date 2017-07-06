@@ -33,11 +33,13 @@ jobs:
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
       - test: npm test
+      - export: VERSION=123
   # We define another Job called "publish". In this stage of the pipeline, we intend
   # on publishing our package to the NPM Registry.
   publish:
     steps:
       - show_secret: echo $MY_SECRET
+      - show_version: echo $VERSION
       # "set_access" is the first step that is executed. We want the community to use
       # our package, so we enable publicly accessible
       # NPM reference document - https://docs.npmjs.com/cli/access
