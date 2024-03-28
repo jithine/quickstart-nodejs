@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_jithine_quickstart_nodejs_1711594149859-push-trigger-input-set
+  identifier: Build_jithine_quickstart_nodejs_1711594149859pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_jithine_quickstart_nodejs_1711594149859
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
